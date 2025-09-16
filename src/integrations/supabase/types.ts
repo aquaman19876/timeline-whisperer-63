@@ -14,7 +14,159 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      program_deadlines: {
+        Row: {
+          completed: boolean | null
+          created_at: string
+          deadline_date: string
+          deadline_type: string
+          description: string | null
+          id: string
+          program_id: string
+          title: string
+        }
+        Insert: {
+          completed?: boolean | null
+          created_at?: string
+          deadline_date: string
+          deadline_type: string
+          description?: string | null
+          id?: string
+          program_id: string
+          title: string
+        }
+        Update: {
+          completed?: boolean | null
+          created_at?: string
+          deadline_date?: string
+          deadline_type?: string
+          description?: string | null
+          id?: string
+          program_id?: string
+          title?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "program_deadlines_program_id_fkey"
+            columns: ["program_id"]
+            isOneToOne: false
+            referencedRelation: "research_programs"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      program_links: {
+        Row: {
+          created_at: string
+          description: string | null
+          id: string
+          link_type: string | null
+          program_id: string
+          title: string
+          url: string
+        }
+        Insert: {
+          created_at?: string
+          description?: string | null
+          id?: string
+          link_type?: string | null
+          program_id: string
+          title: string
+          url: string
+        }
+        Update: {
+          created_at?: string
+          description?: string | null
+          id?: string
+          link_type?: string | null
+          program_id?: string
+          title?: string
+          url?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "program_links_program_id_fkey"
+            columns: ["program_id"]
+            isOneToOne: false
+            referencedRelation: "research_programs"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      program_people: {
+        Row: {
+          created_at: string
+          description: string | null
+          id: string
+          linkedin_url: string | null
+          name: string
+          program_id: string
+          role: string | null
+        }
+        Insert: {
+          created_at?: string
+          description?: string | null
+          id?: string
+          linkedin_url?: string | null
+          name: string
+          program_id: string
+          role?: string | null
+        }
+        Update: {
+          created_at?: string
+          description?: string | null
+          id?: string
+          linkedin_url?: string | null
+          name?: string
+          program_id?: string
+          role?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "program_people_program_id_fkey"
+            columns: ["program_id"]
+            isOneToOne: false
+            referencedRelation: "research_programs"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      research_programs: {
+        Row: {
+          created_at: string
+          description: string | null
+          id: string
+          program_type: string | null
+          status: string | null
+          title: string
+          university: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          description?: string | null
+          id?: string
+          program_type?: string | null
+          status?: string | null
+          title: string
+          university: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          description?: string | null
+          id?: string
+          program_type?: string | null
+          status?: string | null
+          title?: string
+          university?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

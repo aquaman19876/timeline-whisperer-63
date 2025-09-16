@@ -8,51 +8,69 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Academic Research Theme Colors */
+    --background: 249 252 255;
+    --foreground: 215 25% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 255 255 255;
+    --card-foreground: 215 25% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 255 255 255;
+    --popover-foreground: 215 25% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Academic Blue-Purple Primary */
+    --primary: 234 47% 31%;
+    --primary-foreground: 255 255 255;
+    --primary-light: 234 47% 45%;
+    --primary-glow: 234 67% 65%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Sophisticated Secondary */
+    --secondary: 215 25% 92%;
+    --secondary-foreground: 215 25% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 215 20% 95%;
+    --muted-foreground: 215 15% 55%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Research Accent Colors */
+    --accent: 268 83% 87%;
+    --accent-foreground: 268 83% 25%;
+    --accent-deep: 268 83% 45%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 215 20% 88%;
+    --input: 215 20% 92%;
+    --ring: 234 47% 31%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Academic Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(234 47% 31%), hsl(268 83% 45%));
+    --gradient-subtle: linear-gradient(180deg, hsl(249 252 255), hsl(239 249 255));
+    --gradient-accent: linear-gradient(135deg, hsl(268 83% 87%), hsl(234 67% 85%));
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Academic Shadows */
+    --shadow-soft: 0 4px 20px -2px hsl(234 47% 31% / 0.08);
+    --shadow-elegant: 0 10px 40px -10px hsl(234 47% 31% / 0.15);
+    --shadow-glow: 0 0 30px hsl(234 67% 65% / 0.3);
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Typography & Spacing */
+    --font-academic: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-heading: "Inter", system-ui, sans-serif;
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 255 255 255;
+    --sidebar-foreground: 215 25% 25%;
+    --sidebar-primary: 234 47% 31%;
+    --sidebar-primary-foreground: 255 255 255;
+    --sidebar-accent: 215 25% 96%;
+    --sidebar-accent-foreground: 215 25% 25%;
+    --sidebar-border: 215 20% 88%;
+    --sidebar-ring: 234 47% 31%;
   }
 
   .dark {

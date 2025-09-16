@@ -22,6 +22,8 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          light: "hsl(var(--primary-light))",
+          glow: "hsl(var(--primary-glow))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -38,6 +40,7 @@ export default {
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
+          deep: "hsl(var(--accent-deep))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -57,6 +60,26 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      backgroundImage: {
+        "gradient-primary": "var(--gradient-primary)",
+        "gradient-subtle": "var(--gradient-subtle)",
+        "gradient-accent": "var(--gradient-accent)",
+      },
+      boxShadow: {
+        "soft": "var(--shadow-soft)",
+        "elegant": "var(--shadow-elegant)",
+        "glow": "var(--shadow-glow)",
+      },
+      fontFamily: {
+        academic: "var(--font-academic)",
+        heading: "var(--font-heading)",
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in": "fadeIn 0.5s ease-out",
+        "slide-up": "slideUp 0.4s ease-out",
       },
       borderRadius: {
         lg: "var(--radius)",
